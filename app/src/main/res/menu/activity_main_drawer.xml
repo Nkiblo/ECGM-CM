@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/baseline_task_24"
+            android:title="@string/my_current_tasks" />
+        <item
+            android:id="@+id/nav_finished_tasks"
+            android:icon="@drawable/baseline_task_alt_24"
+            android:title="@string/my_finished_tasks" />
+        <item
+            android:id="@+id/nav_projects"
+            android:icon="@drawable/baseline_folder_copy_24"
+            android:title="@string/finished_projects" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile"
+            android:icon="@drawable/baseline_account_circle_24" />
+        <item
+            android:id="@+id/nav_language"
+            android:title="@string/language"
+            android:icon="@drawable/baseline_outlined_flag_24" />
+        <item
+            android:id="@+id/nav_disconnect"
+            android:title="@string/log_out"
+            android:icon="@drawable/baseline_logout_24" />
+    </group>
+</menu>

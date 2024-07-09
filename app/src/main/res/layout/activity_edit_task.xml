@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewTaskNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_name_edit_task"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTaskNameLabel"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/enter_task_name_edit_task">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textViewTaskDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_description_edit_task"
+                android:textStyle="bold"
+                android:layout_below="@id/textInputLayoutTaskName"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/editTextTaskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTaskDescriptionLabel"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/enter_task_description_edit_task"
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+            <TextView
+                android:id="@+id/textViewCompletionPercentageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/completion_percentage_edit_task"
+                android:textStyle="bold"
+                android:layout_below="@id/editTextTaskDescription"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/editTextCompletionPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCompletionPercentageLabel"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/enter_completion_percentage_edit_task"
+                android:inputType="number"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/textViewAssignedUsersLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/assigned_users_edit_task"
+                android:textStyle="bold"
+                android:layout_below="@id/editTextCompletionPercentage"
+                android:layout_marginBottom="4dp" />
+
+            <ListView
+                android:id="@+id/listViewUsers"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_below="@id/textViewAssignedUsersLabel"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:choiceMode="multipleChoice" />
+
+            <Button
+                android:id="@+id/buttonSaveTask"
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listViewUsers"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/buttonDeleteTask"
+                android:text="@string/save_taskedit_task" />
+
+            <Button
+                android:id="@+id/buttonDeleteTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listViewUsers"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/delete_task_edit_task"
+                android:textColor="@android:color/holo_red_dark" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

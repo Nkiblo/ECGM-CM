@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "774260313685",
+    "firebase_url": "https://ecgm-cm-default-rtdb.firebaseio.com",
+    "project_id": "ecgm-cm",
+    "storage_bucket": "ecgm-cm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774260313685:android:00023ff667038077148edc",
+        "android_client_info": {
+          "package_name": "com.example.ecgm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjs8-YbWbOA6zMryIbWBRQxHPfQMZG_cI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

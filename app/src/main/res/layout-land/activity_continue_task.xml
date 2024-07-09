@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <!-- Existing layout content -->
+
+            <TextView
+                android:id="@+id/textViewModificationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/modification_date"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/buttonChooseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewModificationDate"
+                android:layout_marginStart="16dp"
+                android:text="@string/choose_date" />
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonChooseDate"
+                android:layout_margin="16dp"
+                android:text="@string/location"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editTextLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLocation"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/enter_location" />
+
+            <TextView
+                android:id="@+id/textViewTimeSpent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextLocation"
+                android:layout_margin="16dp"
+                android:text="@string/time_spent_hours"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editTextTimeSpent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTimeSpent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/enter_time_spent"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewCompletionPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextTimeSpent"
+                android:layout_margin="16dp"
+                android:text="@string/completion_percentage_0_100"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editTextCompletionPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCompletionPercentage"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/enter_completion_percentage"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewObservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextCompletionPercentage"
+                android:layout_margin="16dp"
+                android:text="@string/observations"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/observationsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewObservations"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonAddObservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/observationsLayout"
+                android:layout_marginStart="16dp"
+                android:text="@string/add_observation" />
+
+            <Button
+                android:id="@+id/buttonSaveContinueTask"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonAddObservation"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="90dp"
+                android:text="@string/save_task" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

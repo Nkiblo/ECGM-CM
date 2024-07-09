@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editProject"
+        android:title="@string/edit_project" />
+    <item
+        android:id="@+id/removeProject"
+        android:title="@string/remove_project" />
+    <item
+        android:id="@+id/addUserToProject"
+        android:title="@string/add_users_to_project" />
+    <item
+        android:id="@+id/addTaskToProject"
+        android:title="@string/add_task_to_project" />
+
+    <item
+        android:id="@+id/viewFinishedTasks"
+        android:title="@string/view_finished_tasks" />
+    <item
+        android:id="@+id/exportProjectStats"
+        android:title="@string/export_project_stats"/>
+    <item
+        android:id="@+id/exportUserStats"
+        android:title="@string/export_user_stats"/>
+    <item
+        android:id="@+id/validateAndFinishProject"
+        android:title="@string/validate_project" />
+</menu>

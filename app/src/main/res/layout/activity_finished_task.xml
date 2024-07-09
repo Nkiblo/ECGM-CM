@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_name_finish"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@id/textViewObservationsLabel" />
+
+            <TextView
+                android:id="@+id/textViewTaskDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_description_finish"
+                android:textStyle="bold"
+                android:layout_below="@id/textViewTaskName"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewTaskDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_description_text_finish"
+                android:layout_below="@id/textViewTaskDescriptionLabel"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textViewCompletionPercentageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/completion_percentage_finish"
+                android:textStyle="bold"
+                android:layout_below="@id/textViewTaskDescription"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewCompletionPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/completion_percentage_text_finish"
+                android:layout_below="@id/textViewCompletionPercentageLabel"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewLastModifiedDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_modified_date_finish"
+                android:textStyle="bold"
+                android:layout_below="@id/textViewCompletionPercentage"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewLastModifiedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_modified_date_text_finish_finish"
+                android:layout_below="@id/textViewLastModifiedDateLabel"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewLocationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_finish"
+                android:textStyle="bold"
+                android:layout_below="@id/textViewLastModifiedDate"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_text_finish_finish"
+                android:layout_below="@id/textViewLocationLabel"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewTimeSpentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_spent_finish"
+                android:textStyle="bold"
+                android:layout_below="@id/textViewLocation"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewTimeSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_spent_text_finish_finish"
+                android:layout_below="@id/textViewTimeSpentLabel"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewAssignedUsersLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/assigned_users_finish"
+                android:layout_below="@id/textViewTimeSpent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewAssignedUsersLabel"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/textViewObservationsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/observations_finish"
+                android:layout_below="@id/recyclerViewUsers"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewObservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewObservationsLabel"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

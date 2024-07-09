@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ScrollView to contain scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- CardView with task details -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewTaskDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Task Name -->
+                    <TextView
+                        android:id="@+id/textViewTaskName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Task Name"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/black" />
+
+                    <!-- Task Description Label -->
+                    <TextView
+                        android:id="@+id/textViewTaskDescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Task Description:"
+                        android:layout_below="@id/textViewTaskName"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Task Description -->
+                    <TextView
+                        android:id="@+id/textViewTaskDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This is the task description."
+                        android:layout_below="@id/textViewTaskDescriptionLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textStyle="italic" />
+
+                    <!-- Completion Percentage Label -->
+                    <TextView
+                        android:id="@+id/textViewCompletionPercentageLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completion Percentage:"
+                        android:layout_below="@id/textViewTaskDescription"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Completion Percentage -->
+                    <TextView
+                        android:id="@+id/textViewCompletionPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50%"
+                        android:layout_below="@id/textViewCompletionPercentageLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Last Modified Date Label -->
+                    <TextView
+                        android:id="@+id/textViewLastModifiedDateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Modified Date:"
+                        android:layout_below="@id/textViewCompletionPercentage"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Last Modified Date -->
+                    <TextView
+                        android:id="@+id/textViewLastModifiedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2023-01-01"
+                        android:layout_below="@id/textViewLastModifiedDateLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Location Label -->
+                    <TextView
+                        android:id="@+id/textViewLocationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location:"
+                        android:layout_below="@id/textViewLastModifiedDate"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Location -->
+                    <TextView
+                        android:id="@+id/textViewLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New York"
+                        android:layout_below="@id/textViewLocationLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Time Spent Label -->
+                    <TextView
+                        android:id="@+id/textViewTimeSpentLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Spent:"
+                        android:layout_below="@id/textViewLocation"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Time Spent -->
+                    <TextView
+                        android:id="@+id/textViewTimeSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 hours"
+                        android:layout_below="@id/textViewTimeSpentLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Assigned Users Label -->
+                    <TextView
+                        android:id="@+id/textViewAssignedUsersLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assigned Users:"
+                        android:layout_below="@id/textViewTimeSpent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Assigned Users RecyclerView (example) -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewAssignedUsersLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <!-- Observations Label -->
+                    <TextView
+                        android:id="@+id/textViewObservationsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Observations:"
+                        android:layout_below="@id/recyclerViewUsers"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <!-- Observations RecyclerView (example) -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewObservations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewObservationsLabel"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- FloatingActionButton positioned at bottom right -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/baseline_settings_24" />
+
+</RelativeLayout>
